@@ -21,7 +21,9 @@ class Geo {
         this.geometry = asyncData;
     }
     static build(): any {
-        return Geo.fetchGeometry().then(())
+        return Geo.fetchGeometry().then((json) => {
+            return new Geo(json)
+        })
     }
 
     static fetchGeometry(): Promise<GeoFeatures>{
@@ -38,5 +40,7 @@ class Geo {
 } 
 
 Geo.build().then((geoObj: Geo) => {
-    console.log(geoObj.geometry[0])
+    geoObj.geometry.forEach((obj) => {
+        console.log(obj.geometry.x, obj.geometry.y)
+    })
 });
