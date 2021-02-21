@@ -1,0 +1,41 @@
+
+header {
+    background-color: #437D4B;
+    color: white;
+}
+
+body {
+    background-image: url('./img/4.jpeg');
+}
+
+img {
+    align-items: center;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+}
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+#mapbtn {
+    background-color: #437D4B;
+    color: white;
+    border-radius: 50%; 
+    padding: 20px;
+    transition-duration: 1s;
+}
+button:hover {
+    transform: scale(1.30);
+    transition: 1s;
+    transition-duration: 1s;
+  }
+
+.button {
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
