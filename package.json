@@ -4,13 +4,8 @@
   "description": "SFU is hosting a hackathon! Its called Storm Hacks, and the top prize is $1000 CAD! We have been viewing the theme for this year, and have decided to go with the environmental theme. We are going to grab API endpoints from the city of Burnaby and other cities, for trash bin locations. Our team is now assembled, so we are ready to go!",
   "main": "index.js",
   "scripts": {
-    "build-ts": "tsc",
-    "postinstall": "npm run build-ts",
-    "start": "npm run serve",
-    "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
-    "watch-ts": "tsc -w"
-  },
+		"start": "nodemon index.js"
+	},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RyanColl/Storm-Hacks-Ryan-Steven-Adam.git"
