@@ -1,46 +1,18 @@
-import fetch from "node-fetch";
+
 import express from "express";
+import { Geo } from "./geo"
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.get("/", (req, res) => res.render("index", {alot: "a lot"}));
+app.listen(8080, () => {
+	console.log("Node application listening on port 8080");
+}); 
 
-
-interface GeoFeatures {
-    attributes: Object;
-    geometry: {
-      x: number;
-      y: number;
-    };
-  }
-  
-class Geo {
-     geometry: GeoFeatures[] = [];
-     private static readonly API_URL= 
-            "https://gis.burnaby.ca/arcgis/rest/services/OpenData/OpenData3/MapServer/2/query?where=1%3D1&outFields=SHAPE&outSR=4326&f=json";
-    private constructor(asyncData: any) {
-        this.geometry = asyncData;
-    }
-    static build(): any {
-        return Geo.fetchGeometry().then((json) => {
-            return new Geo(json)
-        })
-    }
-
-    static fetchGeometry(): Promise<GeoFeatures>{
-        return fetch(this.API_URL, {
-            method: "POST",
-            headers: {
-                "Content-type" : "application/json; charset=UTF-8",
-            },
-        })
-            .then((response) => response.json())
-            .then((json) => json.features)
-            .catch((err) => console.log(err))
-    }
-} 
 
 Geo.build().then((geoObj: Geo) => {
-    geoObj.geometry.forEach((obj) => {
+    geoObj.geometry.forEach((obj: any) => {
         console.log(obj.geometry.x, obj.geometry.y)
     })
 });
