@@ -8,9 +8,9 @@ interface GeoFeatures {
   }
 
 
-export class Geo {
+class Geo {
     geometry: GeoFeatures[] = [];
-    private static readonly API_URL= 
+    private static readonly API_URL = 
            "https://gis.burnaby.ca/arcgis/rest/services/OpenData/OpenData3/MapServer/2/query?where=1%3D1&outFields=SHAPE&outSR=4326&f=json";
    private constructor(asyncData: any) {
        this.geometry = asyncData;
@@ -33,5 +33,9 @@ export class Geo {
            .catch((err) => console.log(err))
    }
 } 
-
-
+export const geoArray: any[] = [];
+Geo.build().then((geoObj: Geo) => {
+    geoObj.geometry.forEach((obj: any) => {
+        geoArray.push({x: obj.geometry.x, y: obj.geometry.y});
+    })
+});
