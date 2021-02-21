@@ -1,4 +1,4 @@
-import { geoArray } from './geo';
+import { geoArray, GeoFeatures } from '../geo';
 
 
 interface LatLng {
