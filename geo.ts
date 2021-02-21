@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-interface GeoFeatures {
+export interface GeoFeatures {
     attributes: Object;
     geometry: {
       x: number;
