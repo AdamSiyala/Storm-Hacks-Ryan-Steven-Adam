@@ -1,0 +1,27 @@
+.simple {
+    background-color: #437D4B;
+    color: lightgray;
+    text-align: center;
+    font-weight: bold
+}
+
+div button {
+    border-radius: 8px;
+    position: relative;
+    top: 580px;
+    left: 105px;
+    color: #437D4B;
+    padding: 15px 32px;
+    font-weight: bold;
+
+}
+
+.background-div {
+    background-color: lightgrey;
+    opacity: 30%;
+}
+
+body {
+    background-image: url("/img/map-background.jpeg");
+    
+}
