@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 var locat = { lat: 49.24890826962529, lng: -122.98049837083043 };
 // const geoLoc = navigator.geolocation
 // geoLoc.getCurrentPosition((position) => {
@@ -19,4 +18,4 @@ var GeoMap = /** @class */ (function () {
 }());
 var geo = new GeoMap();
 geo.geoMaker();
-// geo.markers();
+module.exports = null;
