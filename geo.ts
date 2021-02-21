@@ -36,6 +36,7 @@ class Geo {
 export const geoArray: any[] = [];
 Geo.build().then((geoObj: Geo) => {
     geoObj.geometry.forEach((obj: any) => {
-        geoArray.push({x: obj.geometry.x, y: obj.geometry.y});
+        console.log(obj.geometry)
+        geoArray.push({lat: obj.geometry.x, lng: obj.geometry.y});
     })
 });

@@ -8,7 +8,7 @@
 div button {
     border-radius: 8px;
     position: relative;
-    top: 580px;
+    top: 180px;
     left: 105px;
     color: #437D4B;
     padding: 15px 32px;
@@ -22,6 +22,18 @@ div button {
 }
 
 body {
-    background-image: url("/img/map-background.jpeg");
+    background-image: url("");
     
 }
+#map {
+    height: 400px;
+}
+
+#wrapper {
+    height: 400px;
+}
+html {
+    width: 414px;
+    height: 750px;
+}
+

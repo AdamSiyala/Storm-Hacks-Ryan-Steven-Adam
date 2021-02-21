@@ -1,4 +1,4 @@
-
+import {geoArray} from '../geo'
 
 
 interface LatLng {
@@ -20,13 +20,23 @@ class GeoMap {
           center: locat,
           zoom: 10,
         });
+        
       }
+      // markers() {
+      //   console.log("fitsrarfgdg")
+      //   geoArray.forEach((positionObj) => {
+      //     new google.maps.Marker({ map: this._googleMaps, position: positionObj });
+      //   })
+        
+      // }
     
 
 }
 const geo = new GeoMap()
-function setGeo () {
+
+  
   geo.geoMaker();
-}
+  // geo.markers();
+
 
 

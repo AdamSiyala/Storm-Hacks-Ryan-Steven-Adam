@@ -15,9 +15,47 @@
             <h1 class="title">Trash-it!</h1>
         </header>
         <div class="container">
+            <form action="/myForm" method="GET">
+                <div class="button">
+                    <input id="mapbtn" type="submit" name="" value="Open the Map"></input>
+                </div>
+            </form> 
+        </div>
+    </div>
+    <script>
+        
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            };
+            xhttp.open("GET", "Map.ejs", true);
+            xhttp.send();
+        }
+        
+
+        // $(document).ready(function() {
+        //     $("mapbtn").click(function(){
+                
+        //     })
+        // })
+
+    </script>
+</body>
+</html>
+
+
+<!-- body>
+    <div id="wrapper">
+        <header>
+            <h1 class="title">Trash-it!</h1>
+        </header>
+        <div class="container">
             <form action="#" method="GET">
                 <div class="button">
-                    <input id="mapbtn" type="submit" name="map" value="Open the map"></input>
+                    <input id="mapbtn" type="submit" name="" value=""></input>
                 </div>
             </form> 
         </div>
@@ -30,5 +68,4 @@
         // })
 
     </script>
-</body>
-</html>
+</body> -->

@@ -39,7 +39,6 @@ img {
 #mapbtn:hover {
     width: 300px;
     font-size: 2.0rem;
- 
     transition: 1s;
     transition-duration: 1s;
   }
