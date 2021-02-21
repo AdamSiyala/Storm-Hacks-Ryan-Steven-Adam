@@ -1,4 +1,5 @@
 "use strict";
+
 var locat = { lat: 49.24890826962529, lng: -122.98049837083043 };
 // const geoLoc = navigator.geolocation
 // geoLoc.getCurrentPosition((position) => {
@@ -11,11 +12,13 @@ var GeoMap = /** @class */ (function () {
         console.log("yes");
         this._googleMaps = new google.maps.Map(document.getElementById("map"), {
             center: locat,
-            zoom: 10
+            zoom: 10,
+            disableDefaultUI: true
         });
     };
     return GeoMap;
 }());
+
 var geo = new GeoMap();
 geo.geoMaker();
-module.exports = null;
+// geo.markers();
