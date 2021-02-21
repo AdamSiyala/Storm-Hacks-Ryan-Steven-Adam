@@ -6,7 +6,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.get("/", (req, res) => res.render("index", {alot: "a lot"}));
-
+app.listen(process.env.PORT, () => {
+	console.log(`Node application listening on port ${process.env.PORT}`);
+}); 
 
 let geoArrayX: any[] = [];
 
