@@ -1,6 +1,6 @@
 
 const express = require("express");
-const router = include('routes/router');
+const router = 'routes/router';
 
 const app = express()
 const port = process.env.PORT || 8080;
